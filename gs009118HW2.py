@@ -20,7 +20,6 @@ print("Customer ID: " + str(customerIdList[0])) # indesc customer ID to print th
 print("City: " + str(cityList[0])) # index set to 0 to print the first city
 print("State: " + str(stateList[0])) # index set to 0 to print the first state
 print("Zip Code: " + str(zipCodeList[0])) #  index set to 0 to print the first zip, 
-cityList[11]
 
 # 4 ) create a variable you want to store the index value we want to use to look up values
 customerIndexValue = customerIdList[0]   # made varialbes to show the index value of each previous variable, to shorten the code from the previous problem
@@ -39,6 +38,7 @@ print("Customer " +  str(customerIndexValue) + " ships to " + str(cityIndexValue
 # 6 ) create a new variable 
 nextNewCustomerID = max(customerIdList) + 1  # using the max function to add 1 to the max result
 print("The next new customer will have an ID of " + str(nextNewCustomerID))  # using string and concat to create the final output message
+customerIdList.append(nextNewCustomerID) # used this to fix the index out of range for question 10
 
 # 7 ) using the append method
 cityList.append("Athens")  # append the city
@@ -75,55 +75,55 @@ print("We have " + " " + str(six) + " unique zip codes: " + str(sorted((setZip))
 # 10 ) 
 #dictKeys = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 #dictValues([("Pickerington", "OH", 43147), ("Atlanta", "GA", 30303), ("Atlanta", "GA", 30303), ("Chippewa Falls", "WI", 54729), ("Pickerington", "OH", 43147), ("Atlanta", "GA", 30303), ("Pickerington", "OH", 43147), ("Flushing", "NY", 11354), ("Kalamazoo", "MI", 49009), ("Atlanta", "GA", 30303), ("Athens", "OH", 45701)])
-dictionaryWithCustomerData = {}
-whichIndexValue = 0
-tupleCustData = ("Pickerington", "OH", 43147)
-dictionaryWithCustomerData[customerIdList[whichIndexValue]] = tupleCustData
+dictionaryWithCustomerData = {1:tupleCustDataOne, 2:tupleCustDataTwo, 3:tupleCustDataThree, 4:tupleCustDataFour, 5:tupleCustDataFive, 6:tupleCustDataSix, 7:tupleCustDataSeven, 8:tupleCustDataEight, 9:tupleCustDataNine, 10:tupleCustDataTen, 11:tupleCustDataEleven}
+
+whichIndexValue = 0    # index value to pull from the list
+tupleCustDataOne = (cityList[whichIndexValue], stateList[whichIndexValue], zipCodeList[whichIndexValue])  # values for the dictionary in line 77
+dictionaryWithCustomerData[customerIdList[whichIndexValue]] = tupleCustDataOne # combine line 79 and 80 to go into the dictionary
 
 whichIndexValue = 1
-tupleCustData = ("Atlanta", "GA", 30303) 
-dictionaryWithCustomerData[customerIdList[whichIndexValue]] = tupleCustData
+tupleCustDataTwo = (cityList[whichIndexValue], stateList[whichIndexValue], zipCodeList[whichIndexValue]) # repeat 9 more times 
+dictionaryWithCustomerData[customerIdList[whichIndexValue]] = tupleCustDataTwo
 
 whichIndexValue = 2
-tupleCustData = ("Atlanta", "GA", 30303) 
-dictionaryWithCustomerData[customerIdList[whichIndexValue]] = tupleCustData
+tupleCustDataThree = (cityList[whichIndexValue], stateList[whichIndexValue], zipCodeList[whichIndexValue])
+dictionaryWithCustomerData[customerIdList[whichIndexValue]] = tupleCustDataThree
 
 whichIndexValue = 3
-tupleCustData = ("Chippewa Falls", "WI", 54729)
-dictionaryWithCustomerData[customerIdList[whichIndexValue]] = tupleCustData
+tupleCustDataFour = (cityList[whichIndexValue], stateList[whichIndexValue], zipCodeList[whichIndexValue])
+dictionaryWithCustomerData[customerIdList[whichIndexValue]] = tupleCustDataFour
 
 whichIndexValue = 4
-tupleCustData = ("Pickerington", "OH", 43147)
-dictionaryWithCustomerData[customerIdList[whichIndexValue]] = tupleCustData
+tupleCustDataFive = (cityList[whichIndexValue], stateList[whichIndexValue], zipCodeList[whichIndexValue])
+dictionaryWithCustomerData[customerIdList[whichIndexValue]] = tupleCustDataFive
 
 whichIndexValue = 5
-tupleCustData = ("Atlanta", "GA", 30303) 
-dictionaryWithCustomerData[customerIdList[whichIndexValue]] = tupleCustData
+tupleCustDataSix = (cityList[whichIndexValue], stateList[whichIndexValue], zipCodeList[whichIndexValue])
+dictionaryWithCustomerData[customerIdList[whichIndexValue]] = tupleCustDataSix
 
 whichIndexValue = 6
-tupleCustData = ("Pickerington", "OH", 43147) 
-dictionaryWithCustomerData[customerIdList[whichIndexValue]] = tupleCustData
+tupleCustDataSeven = (cityList[whichIndexValue], stateList[whichIndexValue], zipCodeList[whichIndexValue])
+dictionaryWithCustomerData[customerIdList[whichIndexValue]] = tupleCustDataSeven
 
 whichIndexValue = 7
-tupleCustData = ("Flushing", "NY", 11354)
-dictionaryWithCustomerData[customerIdList[whichIndexValue]] = tupleCustData
+tupleCustDataEight = (cityList[whichIndexValue], stateList[whichIndexValue], zipCodeList[whichIndexValue])
+dictionaryWithCustomerData[customerIdList[whichIndexValue]] = tupleCustDataEight
 
 whichIndexValue = 8
-tupleCustData = ("Kalamazoo", "MI", 49009)
-dictionaryWithCustomerData[customerIdList[whichIndexValue]] = tupleCustData
+tupleCustDataNine = (cityList[whichIndexValue], stateList[whichIndexValue], zipCodeList[whichIndexValue])
+dictionaryWithCustomerData[customerIdList[whichIndexValue]] = tupleCustDataNine
 
 whichIndexValue = 9
-tupleCustData = ("Atlanta", "GA", 30303) 
-dictionaryWithCustomerData[customerIdList[whichIndexValue]] = tupleCustData
+tupleCustDataTen = (cityList[whichIndexValue], stateList[whichIndexValue], zipCodeList[whichIndexValue])
+dictionaryWithCustomerData[customerIdList[whichIndexValue]] = tupleCustDataTen
 
-whichIndexValue = 10
-tupleCustData = ("Athens", "OH", 45701)
-dictionaryWithCustomerData[customerIdList[whichIndexValue]] = tupleCustData
+whichIndexValue = 10  
+tupleCustDataEleven = (cityList[whichIndexValue], stateList[whichIndexValue], zipCodeList[whichIndexValue]) 
+dictionaryWithCustomerData[customerIdList[whichIndexValue]] = tupleCustDataEleven 
 
-dictionaryWithCustomerData
-senKey = 11
-print("The data associated with key " + str(senKey) + " is: " + str(dictionaryWithCustomerData[10]))
-
-
-
-
+printVar = 11 # variable that represents 11 in line 125
+print("The data associated with key " + str(printVar) + " is: " + str(tupleCustDataEleven))
+print("All keys in the dictionary are: ") # sentence for print
+print(dictionaryWithCustomerData.keys()) # shows the key in the dictionary 1, 2, 3...
+print("All values in the dictionary are: ") # sentence for print
+print(dictionaryWithCustomerData.values()) # shows the values such as state city and zip
